@@ -1,8 +1,9 @@
-"use client"
+"use client"; 
+
 import React from 'react'
 import { useUser } from '@clerk/nextjs'
 
-const page = () => {
+const AboutPage = () => {
     const { isSignedIn, user, isLoaded } = useUser();
 
     if (!isLoaded) {
@@ -16,4 +17,4 @@ const page = () => {
     return <div>Hello {user.firstName}!</div>;
 }
 
-export default page
+export default AboutPage;
